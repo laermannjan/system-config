@@ -1,10 +1,13 @@
 { pkgs, ... }: {
 
   users.users.jan.home = "/Users/jan";
+  # users.users.jan.shell = pkgs.fish;
 
   # here go the darwin preferences and config items
+  programs.bash.enable = true;
   programs.zsh.enable = true;
   programs.fish.enable = true;
+
   environment = {
     shells = with pkgs; [ bash zsh fish ];
     loginShell = pkgs.fish;
@@ -17,7 +20,7 @@
   '';
   system.keyboard.enableKeyMapping = true;
   system.keyboard.remapCapsLockToEscape = true;
-  fonts.fontDir.enable = false; #true; # DANGER
+  fonts.fontDir.enable = true; # DANGER
   fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
   services.nix-daemon.enable = true;
   system.defaults = {
