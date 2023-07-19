@@ -1,4 +1,4 @@
-{ pkgs, pwnvim, ... }: {
+{ pkgs, ... }: {
   # Don't change this when you change package input. Leave it alone.
   home.stateVersion = "23.05";
   # specify my home-manager configs
@@ -23,7 +23,7 @@
   programs.zsh.enable = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableAutosuggestions = true;
-  programs.zsh.enableSyntaxHighlighting = true;
+  programs.zsh.syntaxHighlighting.enable = true;
   programs.zsh.shellAliases = {
     ls = "ls --color=auto -F";
     nixswitch = "darwin-rebuild switch --flake ~/code/lj/system-config/.#";

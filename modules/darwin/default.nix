@@ -1,4 +1,7 @@
 { pkgs, ... }: {
+
+  users.users.jan.home = "/Users/jan";
+
   # here go the darwin preferences and config items
   programs.zsh.enable = true;
   programs.fish.enable = true;
