@@ -13,6 +13,7 @@
     PAGER = "less";
     CLICLOLOR = 1;
     EDITOR = "nvim";
+    # MANPAGER = "sh -c 'col -bx | bat -l man -p'";
   };
 
   programs.bat = {
@@ -78,15 +79,17 @@
     enable = true;
     plugins = [
        {
-		name = "autopair";
-		src = pkgs.fetchFromGitHub {
-			owner = "jorgebucaran";
-			repo = "autopair.fish";
-			rev = "1.0.4";
-			sha256 = "sha256-s1o188TlwpUQEN3X5MxUlD/2CFCpEkWu83U9O+wg3VU=";
-		};
-	}
-
+         name = "plugin-git";
+	 src = pkgs.fishPlugins.plugin-git.src;
+       }
+       {
+         name = "autopair";
+	 src = pkgs.fishPlugins.autopair.src;
+       }
+       {
+         name = "colored-man-pages";
+	 src = pkgs.fishPlugins.colored-man-pages.src;
+       }
        {
 		name = "replay";
 		src = pkgs.fetchFromGitHub {
@@ -101,22 +104,11 @@
       rm = "rm -i";
       cp = "cp -i";
       mv = "mv -i";
-    };
-    shellAbbrs = {
-      gco = "git checkout";
-      gcb = "git checkout -b";
-      gc = "git commit -v";
-      gcm = "git commit -m";
-      gcv = "git commit -m --no-verify";
-      gb = "git branch -vv";
-
-      gst = "git status";
-      gp = "git push";
-      glo = "git log --oneline --decorate --color";
-      gloo = "git log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short";
-      ga = "git add";
+      nixswitch = "darwin-rebuild switch --flake ~/code/lj/system-config/.#";
+      nixup = "pushd ~/code/lj/system-config; nix flake update; nixswitch; popd";
 
     };
+    shellAbbrs = {};
   };
 
   programs.starship = {
