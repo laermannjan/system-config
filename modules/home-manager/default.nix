@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   # Don't change this when you change package input. Leave it alone.
-  home.stateVersion = "23.05";
+  home.stateVersion = "23.11";
   # specify my home-manager configs
   home.packages = with pkgs; [
     ripgrep
@@ -14,19 +14,62 @@
     CLICLOLOR = 1;
     EDITOR = "nvim";
   };
-  programs.bat.enable = true;
-  programs.bat.config.theme = "TwoDark";
-  programs.fzf.enable = true;
-  programs.fzf.enableZshIntegration = true;
-  programs.exa.enable = true;
-  programs.git.enable = true;
+
+  programs.bat = {
+  	enable = true;
+  	config.theme = "TwoDark";
+  };
+
+  programs.direnv = {
+  	enable = true;
+	nix-direnv.enable = true;
+  };
+
+  programs.fzf = {
+  	enable = true;
+  	enableBashIntegration = true;
+  	enableZshIntegration = true;
+  	enableFishIntegration = true;
+  };
+
+  programs.zoxide = {
+  	enable = true;
+  	enableBashIntegration = true;
+  	enableZshIntegration = true;
+  	enableFishIntegration = true;
+  };
+
+  programs.exa = {
+  	enable = true;
+	enableAliases = true;
+	extraOptions = [
+	  "--header"
+	  "--group-directories-first"
+	  "--group"
+	  "--git"
+	  "--bytes"
+	];
+  };
+
+  programs.git = {
+  	enable = true;
+  };
+
+  programs.bash = {
+  	enable = true;
+	enableCompletion = true;
+  };
+
+  programs.btop = {
+  	enable = true;
+  };
+
   programs.zsh = {
 	enable = true;
 	  enableCompletion = true;
 	  enableAutosuggestions = true;
 	  syntaxHighlighting.enable = true;
 	  shellAliases = {
-	    ls = "ls --color=auto -F";
 	    nixswitch = "darwin-rebuild switch --flake ~/code/lj/system-config/.#";
 	    nixup = "pushd ~/code/lj/system-config; nix flake update; nixswitch; popd";
 	  };
@@ -35,7 +78,7 @@
 
 
   programs.fish = {
-    enable = false;
+    enable = true;
     shellAliases = {
       rm = "rm -i";
       cp = "cp -i";
@@ -58,8 +101,10 @@
     };
   };
 
-  programs.starship.enable = true;
-  programs.starship.enableZshIntegration = true;
+  programs.starship = {
+  	enable = true;
+  };
+  
   programs.alacritty = {
     enable = true;
     settings.font.normal.family = "MesloLGS Nerd Font Mono";

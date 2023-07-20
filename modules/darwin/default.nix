@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
   users.users.jan.home = "/Users/jan";
-  # users.users.jan.shell = pkgs.fish;
+  users.users.jan.shell = pkgs.fish;
 
   # here go the darwin preferences and config items
   programs.bash.enable = true;
@@ -23,6 +23,7 @@
   fonts.fontDir.enable = true; # DANGER
   fonts.fonts = [ (pkgs.nerdfonts.override { fonts = [ "Meslo" ]; }) ];
   services.nix-daemon.enable = true;
+  nix.package = pkgs.nixUnstable;
   system.defaults = {
     finder.AppleShowAllExtensions = true;
     finder._FXShowPosixPathInTitle = true;
