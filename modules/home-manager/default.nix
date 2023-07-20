@@ -27,17 +27,15 @@
 
   programs.fzf = {
   	enable = true;
-  	enableBashIntegration = true;
-  	enableZshIntegration = true;
-  	enableFishIntegration = true;
+	colors = {
+		fg="#c0caf5,bg:#1a1b26,hl:#bb9af7";
+		"fg+"="#c0caf5,bg+:#1a1b26,hl+:#7dcfff";
+		info="#7aa2f7,prompt:#7dcfff,pointer:#7dcfff";
+		marker="#9ece6a,spinner:#9ece6a,header:#9ece6a";
+	};
   };
 
-  programs.zoxide = {
-  	enable = true;
-  	enableBashIntegration = true;
-  	enableZshIntegration = true;
-  	enableFishIntegration = true;
-  };
+  programs.zoxide. enable = true;
 
   programs.exa = {
   	enable = true;
@@ -57,7 +55,6 @@
 
   programs.bash = {
   	enable = true;
-	enableCompletion = true;
   };
 
   programs.btop = {
@@ -79,6 +76,27 @@
 
   programs.fish = {
     enable = true;
+    plugins = [
+       {
+		name = "autopair";
+		src = pkgs.fetchFromGitHub {
+			owner = "jorgebucaran";
+			repo = "autopair.fish";
+			rev = "1.0.4";
+			sha256 = "sha256-s1o188TlwpUQEN3X5MxUlD/2CFCpEkWu83U9O+wg3VU=";
+		};
+	}
+
+       {
+		name = "replay";
+		src = pkgs.fetchFromGitHub {
+			owner = "jorgebucaran";
+			repo = "replay.fish";
+			rev = "1.2.1";
+			sha256 = "sha256-bM6+oAd/HXaVgpJMut8bwqO54Le33hwO9qet9paK1kY=";
+		};
+	}
+    ];
     shellAliases = {
       rm = "rm -i";
       cp = "cp -i";
