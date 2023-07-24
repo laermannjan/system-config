@@ -38,8 +38,13 @@
     enable = true;
     caskArgs.no_quarantine = true;
     global.brewfile = true;
-    masApps = { };
-    casks = [ "raycast" "amethyst" ];
+    masApps = {
+      rcmd =  1596282165;
+      TheUnarchiver = 425425353;
+      pandan = 1659600264;
+      Velja = 1607635845;
+    };
+    casks = [ "raycast" "amethyst" "pycharm" "visual-studio-code" "1password" "docker" "brave-browser" "karabiner-elements" "fantastical" "obsidian" "stats" "vlc"];
     # taps = [ "fujiapple852/trippy" ];
     # brews = [ "trippy" ];
   };
