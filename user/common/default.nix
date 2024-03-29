@@ -27,7 +27,7 @@
     ./ssh
     ./termusic.nix
     ./tmux.nix
-    ./wezterm.nix
+    ./wezterm
     ./yazi.nix
     ./yt-dlp.nix
     ./zoxide.nix

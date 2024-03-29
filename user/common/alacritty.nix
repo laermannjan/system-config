@@ -16,8 +16,8 @@
         # ];
       };
       window = {
-        startup_mode = "Windowed";
-        decorations = "Buttonless";
+        startup_mode = "Maximized";
+        decorations = "Full";
         decorations_theme_variant = "Dark";
         dimensions = {
           columns = 0;
@@ -34,7 +34,7 @@
         normal = {
           family = "Hack Nerd Font Propo";
         };
-        size = 12.0;
+        size = 16.0;
       };
       # URL highlighting
       hints = {
