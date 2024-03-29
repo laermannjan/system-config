@@ -69,7 +69,7 @@
                 #     inputs.neovix.overlays.default
                   ];
                 }
-                (import ./common)
+                (import ./system/common)
               ];
             };
             # NixOS specific configuration
@@ -78,13 +78,13 @@
             #     # Custom inputs
             #     inputs.impermanence.nixosModules.impermanence
             #     inputs.disko.nixosModules.disko
-            #     (import ./linux)
+            #     (import ./system/linux)
             #   ];
             #   system.stateVersion = "${stateVersion}";
             # };
             # nix-darwin specific configuration
             darwin = {
-              imports = [ (import ./darwin) ];
+              imports = [ (import ./system/darwin) ];
               system.stateVersion = darwinStateVersion;
             };
           };
@@ -92,11 +92,11 @@
           # All home-manager configurations are kept here.
           homeModules = {
             # Common home-manager configuration shared between Linux and macOS.
-            common = import ./home-manager;
+            common = import ./user/common;
             # # home-manager config specific to NixOS
-            # linux = import ./home-manager/linux;
+            # linux = import ./user/linux;
             # home-manager config specifi to Darwin
-            darwin = import ./home-manager/darwin;
+            darwin = import ./user/darwin;
           };
         };
     };
