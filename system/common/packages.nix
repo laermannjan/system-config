@@ -18,11 +18,8 @@ in
     rsync
     bc
     jq
-    zoxide
     neovim
 
-    # git
-    gh
 
     # ssh
     openssh
@@ -43,14 +40,5 @@ in
     # media
     ffmpeg
     pandoc
-
-    alacritty
-    kitty
-    wezterm
-    vlc-bin
-    jetbrains.pycharm-professional
-    jetbrains.rust-rover
-
-    eza
   ];
 }
