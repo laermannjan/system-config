@@ -72,12 +72,6 @@ in
       set fish_pager_color_completion cdd6f4
       set fish_pager_color_description 6c7086
     '' + fish_path;
-    shellAliases = {
-        l = "eza";
-        la = "eza --all --binary";
-        ll = "eza --group --header --group-directories-first --long --git";
-        lla = "eza --group --header --group-directories-first --long --git --all --binary";
-    };
     plugins = [
       {
         name = "plugin-git";

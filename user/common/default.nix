@@ -9,6 +9,7 @@
   imports = [
     # common home-manager configs
     ./alacritty.nix
+    ./bash.nix
     ./bat.nix
     ./bottom.nix
     ./direnv.nix
@@ -30,5 +31,6 @@
     ./yazi.nix
     ./yt-dlp.nix
     ./zoxide.nix
+    ./zsh.nix
   ];
 }
