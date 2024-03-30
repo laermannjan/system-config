@@ -5,6 +5,7 @@
     vlc-bin
     jetbrains.pycharm-professional
     jetbrains.rust-rover
+    discord
   ];
   imports = [
     # common home-manager configs
