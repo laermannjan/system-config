@@ -25,6 +25,7 @@
     ./neovim
     ./ripgrep.nix
     ./ssh
+    ./starship
     ./termusic.nix
     ./tmux.nix
     ./wezterm
