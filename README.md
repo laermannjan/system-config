@@ -46,3 +46,4 @@ nix flake new -t github.com:laermannjan/flake-templates#python-pipenv
 - macos options
 - outsource dotfiles, atleast neovim config into separate repo?
 - tmux config
+- use nix to supply lsps, etc instead of mason
