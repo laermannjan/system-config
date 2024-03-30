@@ -14,7 +14,7 @@
     ./bash.nix
     ./bat.nix
     ./bottom.nix
-    ./direnv.nix
+    ./direnv
     ./eza.nix
     ./fish
     ./fzf.nix
