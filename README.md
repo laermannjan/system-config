@@ -32,10 +32,17 @@
    darwin-rebuild switch --flake .#macbook
    ```
 
+## DevShells
+
+1. initialize a flake from `github.com/laermannjan/flake-templates`
+
+For example: 
+```bash
+nix flake new -t github.com:laermannjan/flake-templates#python-pipenv
+```
+
+
 ## TODOs
 - macos options
-- get secrets from 1password into nix build
-- devshells (for prism_charles, etc)
 - outsource dotfiles, atleast neovim config into separate repo?
-- setup wezterm and kitty
 - tmux config
