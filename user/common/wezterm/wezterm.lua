@@ -204,14 +204,15 @@ config.keys = {
 		key = "g",
 		mods = "CMD",
 		action = wezterm.action.SpawnCommandInNewTab({
-			args = { "/opt/homebrew/bin/fish", "-c", "/opt/homebrew/bin/lazygit" },
+			args = { os.getenv("SHELL"), "-c", "lazygit" },
+			label = "lazygit",
 		}),
 	},
 	{
 		key = "b",
 		mods = "CMD",
 		action = wezterm.action.SpawnCommandInNewTab({
-			args = { "btop" },
+			args = { os.getenv("SHELL"), "-c", "btop" },
 		}),
 	},
 	{
@@ -220,11 +221,11 @@ config.keys = {
 		action = wezterm.action_callback(function(window, pane)
 			-- Here you can dynamically construct a longer list if needed
 
-			local cmd = [[{
-                /opt/homebrew/bin/fd --type directory --exact-depth 1 . ~/code/{alcemy,lj}
-                /opt/homebrew/bin/fd --type directory --exact-depth 3 . ~/code/lj/dotfiles
-                }]]
-			local _, code_dirs, _ = wezterm.run_child_process({ "bash", "-c", cmd })
+			local _, code_dirs, _ = wezterm.run_child_process({
+				os.getenv("SHELL"),
+				"-c",
+				"fd --type directory --exact-depth 1 . ~/code/{alcemy,lj}",
+			})
 
 			local workspaces = { { id = wezterm.home_dir .. "/Downloads/", label = wezterm.home_dir .. "/Downloads/" } }
 			for dir in code_dirs:gmatch("[^\r\n]+") do
