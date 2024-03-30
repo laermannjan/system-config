@@ -36,6 +36,13 @@ in
       # Enable AWS CLI autocompletion: github.com/aws/aws-cli/issues/1079
       complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
+      # 1password completions
+      op completion fish | source
+
+      # allow 1password-cli ssh-agent to see which keys are available
+      # `ssh-add -l` will now show all available ssh-keys from 1password
+      set -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
       # catppuccin fzf
       set -Ux FZF_DEFAULT_OPTS "\
       --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
