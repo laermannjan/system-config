@@ -6,6 +6,7 @@
     jetbrains.pycharm-professional
     jetbrains.rust-rover
     discord
+    youtube-music
   ];
   imports = [
     # common home-manager configs
