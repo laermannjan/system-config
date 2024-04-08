@@ -41,6 +41,15 @@ For example:
 nix flake new -t github.com:laermannjan/flake-templates#python-pipenv
 ```
 
+## 1Password
+The flakes will install 1Password and the 1Password-cli. SSH-keys and other credentials (e.g. AWS Access Tokens, see direnv config) are loaded via the `op` cli.
+Remember to install repsective plugins (couldn't figure out a way to do this via nix, yet)
+```bash
+op plugin init aws
+op plugin init glab
+op plugin init gh
+```
+
 
 ## TODOs
 - macos options

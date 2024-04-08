@@ -34,6 +34,7 @@ in
 
       # 1password completions
       op completion fish | source
+      source ~/.config/op/plugins.sh
 
       # allow 1password-cli ssh-agent to see which keys are available
       # `ssh-add -l` will now show all available ssh-keys from 1password
