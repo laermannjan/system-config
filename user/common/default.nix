@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    nodejs
     vlc-bin
     jetbrains.pycharm-professional
     jetbrains.rust-rover
@@ -11,14 +12,17 @@
   imports = [
     # common home-manager configs
     ./alacritty.nix
+    ./awscli.nix
     ./bash.nix
     ./bat.nix
     ./bottom.nix
+    ./btop.nix
     ./direnv
     ./eza.nix
     ./fish
     ./fzf.nix
     ./gh.nix
+    ./go.nix
     ./git.nix
     ./kitty.nix
     ./lazygit.nix
