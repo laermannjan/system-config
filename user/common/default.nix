@@ -20,7 +20,6 @@
     ./fzf.nix
     ./gh.nix
     ./git.nix
-    ./gpg.nix
     ./kitty.nix
     ./lazygit.nix
     ./ncspot.nix

@@ -29,10 +29,6 @@ in
       # VI key bindings
       set fish_key_bindings fish_vi_key_bindings
 
-      # SSH GPG auth
-      set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-      gpgconf --launch gpg-agent
-
       # Enable AWS CLI autocompletion: github.com/aws/aws-cli/issues/1079
       complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
