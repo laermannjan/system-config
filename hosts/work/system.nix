@@ -32,9 +32,7 @@
   };
 
   myNixOS = {
-    features = {
-        fooasdflkjasdf.enable = true;
-    };
+    fooasdflkjasdf.enable = true;
   };
 
   # Set Git commit hash for darwin-version.
