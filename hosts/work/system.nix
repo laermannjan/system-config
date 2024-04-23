@@ -32,10 +32,9 @@
   };
 
   myNixOS = {
-    home-manager = {
-        enable = true;
-        userConfig = ./home.nix;
-    };
+    userName = "jan";
+    userConfig = ./home.nix;
+    home-manager.enable = true;
     darwin-settings.enable = true;
   };
 
