@@ -29,6 +29,10 @@ function M.config()
 			-- formatting.eslint,
 			-- null_ls.builtins.diagnostics.eslint,
 			null_ls.builtins.completion.spell,
+
+            null_ls.builtins.code_actions.statix,
+            null_ls.builtins.formatting.alejandra,
+            null_ls.builtins.diagnostics.deadnix,
 		},
 	}
 

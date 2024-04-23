@@ -20,6 +20,7 @@ M.config = function()
 			"lua",
 			"python",
 			"rust",
+			"nix",
 			"tsx",
 			"javascript",
 			"typescript",

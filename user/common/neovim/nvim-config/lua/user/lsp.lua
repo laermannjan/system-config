@@ -68,20 +68,21 @@ function M.common_capabilities()
 end
 
 M.servers = {
-	"lua_ls",
-	"cssls",
-	"html",
 	"astro",
-	"pyright",
 	"bashls",
-	"jsonls",
-	"yamlls",
-	"marksman",
-	"tailwindcss",
+	"cssls",
 	"eslint",
-	"rust_analyzer",
 	"gopls",
+	"html",
+	"jsonls",
+	"lua_ls",
+	"marksman",
+	"nil_ls",
+	"pyright",
 	"ruff_lsp",
+	"rust_analyzer",
+	"tailwindcss",
+	"yamlls",
 }
 
 function M.config()
