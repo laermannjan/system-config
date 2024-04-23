@@ -6,7 +6,7 @@ local M = {
 
 M.config = function()
 	require("toggleterm").setup {
-		open_mapping = [[<c-/>]],
+		open_mapping = [[<c-;>]],
 		direction = "float",
 	}
 	local Terminal = require("toggleterm.terminal").Terminal
@@ -30,7 +30,7 @@ M.config = function()
 		lazygit:toggle()
 	end
 
-	vim.api.nvim_set_keymap("n", "<leader>gz", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
+	vim.api.nvim_set_keymap("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 end
 
 -- function M.config()

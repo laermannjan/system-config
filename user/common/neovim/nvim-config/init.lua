@@ -33,7 +33,6 @@ spec "user.todo-comments"
 -- spec "user.ufo" -- TODO: see launch.nvim config
 --
 spec "user.copilot"
-spec "user.neogit"
 -- spec "user.gitlinker"
 spec "user.gitsigns"
 -- spec "user.diffview"
