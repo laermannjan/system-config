@@ -5,4 +5,7 @@
   lib,
   ...
 }: {
+    myHomeManager = {
+        wezterm.enable = true;
+    };
 }
