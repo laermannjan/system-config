@@ -18,7 +18,6 @@ in {
     };
 
     userConfig = lib.mkOption {
-      default = ./home.nix;
       description = ''
         home-manager config path
       '';
