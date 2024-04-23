@@ -58,6 +58,9 @@
 
         # IntelliJ
         ".idea/"
+
+        "flake.nix"
+        "flake.lock"
       ];
       aliases = {
         # acp = ''

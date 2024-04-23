@@ -6,5 +6,8 @@
       enable = true;
     };
   };
-  xdg.configFile."wezterm/wezterm.lua".source = ./wezterm.lua;
+  xdg.configFile."wezterm" = {
+    source = ./wezterm;
+    recursive = true;
+  };
 }

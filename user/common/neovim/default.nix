@@ -11,4 +11,11 @@
      source = ./nvim-config;
      recursive = true;
   };
+
+
+  home.packages = with pkgs; [
+    alejandra
+    deadnix
+    statix
+  ];
 }

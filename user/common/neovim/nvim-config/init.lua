@@ -46,4 +46,5 @@ spec "user.toggleterm"
 spec "user.neotest"
 
 spec "user.various-textobjects"
+spec "user.smart-splits"
 require "user.lazy"

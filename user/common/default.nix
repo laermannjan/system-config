@@ -8,6 +8,9 @@
     jetbrains.rust-rover
     discord
     youtube-music
+    slack
+    lazydocker
+    argo
   ];
   imports = [
     # common home-manager configs

@@ -7,5 +7,6 @@
     raycast
     stats
     iina
+    utm
   ];
 }

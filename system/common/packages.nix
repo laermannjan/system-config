@@ -40,5 +40,6 @@ in
     # media
     ffmpeg
     pandoc
+    dogdns
   ];
 }

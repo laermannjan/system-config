@@ -33,8 +33,9 @@ vim.keymap.set("n", "<leader>uw", ":lua vim.wo.wrap = not vim.wo.wrap<CR>", { de
 
 vim.keymap.set("t", "<C-;>", "<C-\\><C-n>")
 
--- Better window navigation
-vim.keymap.set("n", "<m-h>", "<C-w>h", { noremap = true, silent = true })
-vim.keymap.set("n", "<m-j>", "<C-w>j", { noremap = true, silent = true })
-vim.keymap.set("n", "<m-k>", "<C-w>k", { noremap = true, silent = true })
-vim.keymap.set("n", "<m-l>", "<C-w>l", { noremap = true, silent = true })
+-- Better window navigation  -- NOTE: now using smart-splits.nvim instead
+--
+-- vim.keymap.set("n", "<m-h>", "<C-w>h", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<m-j>", "<C-w>j", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<m-k>", "<C-w>k", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<m-l>", "<C-w>l", { noremap = true, silent = true })

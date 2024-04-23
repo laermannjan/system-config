@@ -25,7 +25,7 @@ function ssh-prism
     switch $target
         case "dyn_*"
             set url "prism-$target-$suffix"
-        case "testing|staging"
+        case "testing" "staging"
             set url "dev-$suffix"
         case prod
             set url "prod-$suffix"
@@ -36,6 +36,6 @@ function ssh-prism
     end
     echo "forwarding **$target** to port $port"
     set fish_trace 1
-    ssh -i ~/.ssh/id_alcemy -NL $port:$url ec2-user@$bastion
+    ssh -NL $port:$url # ec2-user@$bastion
 end
 

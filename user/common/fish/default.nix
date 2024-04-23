@@ -26,9 +26,6 @@ in
       # Disable greeting
       set fish_greeting
 
-      # VI key bindings
-      set fish_key_bindings fish_vi_key_bindings
-
       # Enable AWS CLI autocompletion: github.com/aws/aws-cli/issues/1079
       complete --command aws --no-files --arguments '(begin; set --local --export COMP_SHELL fish; set --local --export COMP_LINE (commandline); aws_completer | sed \'s/ $//\'; end)'
 
@@ -40,6 +37,8 @@ in
       # `ssh-add -l` will now show all available ssh-keys from 1password
       set -x SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
+      # set -x NVIM_APPNAME nvim-astro
+      set -x PIPENV_VENV_IN_PROJECT 1
 
       # name: 'Catppuccin mocha'
       # url: 'https://github.com/catppuccin/fish'
@@ -87,8 +86,8 @@ in
     ];
   };
 
-  xdg.configFile = {
-    "fish/functions/flakify.fish".source = ./functions/flakify.fish;
-    "fish/functions/man.fish".source = ./functions/man.fish;
+  xdg.configFile."fish/functions" = {
+    source = ./functions;
+    recursive = true;
   };
 }

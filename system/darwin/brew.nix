@@ -15,6 +15,7 @@
     taps = [
       "homebrew/services"
       "macos-fuse-t/homebrew-cask"
+      "homebrew/cask-versions"
     ];
 
     # brews = [
@@ -46,6 +47,10 @@
       # "stats"
       # "tor-browser"
       # "transmission"
+      "tailscale"
+      "thunderbird"
+      "docker"
+      "firefox-developer-edition"
     ];
   };
 }
