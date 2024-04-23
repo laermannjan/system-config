@@ -33,8 +33,8 @@
           #     # Disable press-and-hold for keys in favor of key repeat
           #     ApplePressAndHoldEnabled = false;
           #     # Set a blazingly fast keyboard repeat rate
-          KeyRepeat = 2;
-          #     InitialKeyRepeat = 10;
+                KeyRepeat = 1;
+                InitialKeyRepeat = 15;
           #     # Enable subpixel font rendering on non-Apple LCDs
           #     # Reference: https://github.com/kevinSuttle/macOS-Defaults/issues/17#issuecomment-266633501
           #     AppleFontSmoothing = 2;
