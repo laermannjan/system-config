@@ -9,7 +9,7 @@
 }: {
   imports = [
     inputs.home-manager.darwinModules.home-manager
-    inputs.home-manager.nixosModules.home-manager
+    # inputs.home-manager.nixosModules.home-manager
   ];
 
   config = {
