@@ -32,6 +32,7 @@
   };
 
   myNixOS = {
+    home-manager.enable = true;
     darwin-settings.enable = true;
   };
 
