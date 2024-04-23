@@ -177,7 +177,7 @@ local keys = {
 	-- 			pane
 	-- 		)
 	-- 	end),
-	},
+	-- },
 }
 
 local config = {
