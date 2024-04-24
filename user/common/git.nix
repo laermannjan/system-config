@@ -16,6 +16,9 @@
         # signByDefault = true;
       };
       ignores = [
+        # IntelliJ
+        ".idea/"
+
         # Vim/Emacs
         "*~"
         ".*.swp"
@@ -58,9 +61,6 @@
         ".env/"
         "node_modules"
         ".sass-cache"
-
-        # IntelliJ
-        ".idea/"
       ];
       aliases = {
         # acp = ''
