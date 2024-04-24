@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   programs = {
     git = {
       enable = true;
@@ -58,9 +61,6 @@
 
         # IntelliJ
         ".idea/"
-
-        "flake.nix"
-        "flake.lock"
       ];
       aliases = {
         # acp = ''
@@ -142,7 +142,6 @@
         transfer.fsckobjects = true;
         fetch.fsckobjects = true;
         receive.fsckObjects = true;
-
       };
       delta = {
         enable = true;
