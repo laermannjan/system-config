@@ -5,7 +5,11 @@
   lib,
   ...
 }: {
-    myHomeManager = {
-        wezterm.enable = true;
-    };
+  myHomeManager = {
+    wezterm.enable = true;
+  };
+
+  home = {
+    stateVersion = "24.05";
+  };
 }
