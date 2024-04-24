@@ -23,6 +23,12 @@ in {
       '';
     };
 
+    userHome = lib.mkOption {
+      description = ''
+        User home directorty
+      '';
+    };
+
     userNixosSettings = lib.mkOption {
       default = {};
       description = ''
@@ -53,6 +59,7 @@ in {
 
     users.users.${cfg.userName} =
       {
+        home = cfg.userHome;
         description = cfg.userName;
         shell = pkgs.fish;
       }
