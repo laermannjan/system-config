@@ -53,8 +53,6 @@ in {
 
     users.users.${cfg.userName} =
       {
-        isNormalUser = true;
-        initialPassword = "12345";
         description = cfg.userName;
         shell = pkgs.fish;
       }
